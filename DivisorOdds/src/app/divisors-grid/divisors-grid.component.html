@@ -1,0 +1,28 @@
+<div class="divisors-grid">
+    <h1>Seu número é: {{number}}</h1> 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Divisor
+                </th>
+                <th>
+                    É primo?
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let number of numberList">
+                <td>
+                    {{number?.item2}}
+                </td>
+                <td *ngIf="number?.item1">
+                    Sim
+                </td>
+                <td *ngIf="!number?.item1">
+                    Não
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
